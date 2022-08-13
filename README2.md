@@ -3,3 +3,4 @@
 
 Video youtube: https://youtu.be/OFP7A_a2hjE
 
+[Informe Proyecto Mande .pdf](https://github.com/GABO1017/proyecto_db-main-main/files/9330860/Proyecto.Mande.2.pdf)
