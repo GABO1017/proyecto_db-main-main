@@ -1,0 +1,46 @@
+head
+  meta(charset='utf-8')
+  title Medio de Pago
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+  link(rel='stylesheet', href='/stylesheets/style.css') 
+  body
+    .modal-dialog
+        .modal-content
+          // Modal Header
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") 
+              span.sr-only Close  
+            h4(style="font-size:50" )
+             #myModalLabel.modal-title
+             b
+              center| Información de Usuario
+          // Modal Body
+          .modal-body
+            form(role='form' method='POST' action='http://localhost:3000/medio_pago')
+            
+            div.form-group  
+              center
+                label(for='pago') Medio de pago:
+              center
+                img(src="https://cdn.icon-icons.com/icons2/1534/PNG/512/3338967-card-credit_106897.png" width="200" height="200")  
+              center   
+                label(for='tarjeta') Tipo de tarjeta:
+                select(name='tarjeta')
+                  option(value='debito') Debito
+                  option(value='credito') Credito            
+            div.form-group          
+                label(for='numTarjeta') Numero tarjeta:    
+                input(type='text', name='numTarjeta', placeholder='' maxlength="16")
+                label(for='cvc') ㅤㅤㅤㅤㅤㅤㅤCVC
+                input(type='number', name='cvc', min="000" max="999" maxlength="3")        
+            div.form-group
+               <label for="vencimiento">Fecha de Vencimiento:</label>
+            div.form-group   
+               <input type="date" id="nacimiento" name="nacimiento">
+            div.form-group
+            center         
+             a(class='button' href='http://localhost:3000' class='btn btn-primary') Completar registro
+          // Modal Footer
+          .modal-footer
+            h6 Derechos Reservados 2022 &#169

@@ -1,0 +1,44 @@
+head
+  meta(charset='utf-8')
+  title Servicios
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+  link(rel='stylesheet', href='/stylesheets/style.css') 
+  body
+    .modal-dialog
+        .modal-content
+          // Modal Header
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") 
+              span.sr-only Close  
+            h4(style="font-size:50" )
+             #myModalLabel.modal-title
+             b
+              center| ¿Que servicio desea contratar?
+          // Modal Body
+          .modal-body
+            form(role='form' method='POST' action='http://localhost:3000/servicios')
+            div.form-group
+            center         
+             <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/7323/7323885.png" height ="80" width="100"/> <p> Plomero/a </p></button>
+             <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/834/834219.png" height ="80" width="100" href='localhost:3000' /> <p> Cerrajero/a </p> </button>
+            div.form-group
+            center         
+             <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/2850/2850278.png" height ="80" width="100"/> <p> Pintor/a </p></button>
+             <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/4710/4710521.png" height ="80" width="100"/> <p> Profesor/a de ingles </p></button>
+            div.form-group
+            center         
+             <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/421/421938.png" height ="80" width="100"/> <p> Mesero/a </p></button>
+             <button type="button"> <img src="https://cdn-icons.flaticon.com/png/512/3437/premium/3437546.png?token=exp=1660272579~hmac=883722b120945dd5810133ccc8da278f" height ="80" width="100"/> <p> Chef </p></button>
+            div.form-group
+            center         
+             <button type="button"> <img src="https://cdn-icons.flaticon.com/png/512/5910/premium/5910144.png?token=exp=1660272666~hmac=0db96f06b08dcdcc574b0bd5c844360e" height ="80" width="100"/> <p> Niñero/a </p></button>
+             <button type="button"> <img src="https://cdn-icons.flaticon.com/png/512/4035/premium/4035222.png?token=exp=1660272736~hmac=9e4d6a48c9e4c705c90e2ec19c7c5d95" height ="80" width="100"/> <p> Paseador/a de mascotas </p></button>
+            div.form-group
+            center         
+             <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/2548/2548018.png" height ="80" width="100"/> <p> Empleado/a doméstico/a </p></button>
+             <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/1464/1464628.png" height ="80" width="100"/> <p> Conductor/a </p></button>
+            div.form-group 
+          // Modal Footer
+          .modal-footer
+            h6 Derechos Reservados 2022 &#169

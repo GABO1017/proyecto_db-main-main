@@ -1,0 +1,43 @@
+head
+  meta(charset='utf-8')
+  title Registro trabajador
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+  link(rel='stylesheet', href='/stylesheets/style.css') 
+  body
+    .modal-dialog
+        .modal-content
+          // Modal Header
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") 
+              span.sr-only Close  
+            h4(style="font-size:50" )
+             #myModalLabel.modal-title
+             b
+              center| Información de trabajador
+          // Modal Body
+          .modal-body
+            form(role='form' method='POST' action='http://localhost:3000/labor_trabajador')
+            
+            div.form-group  
+                
+                label(for='labor') Labor a desempeñar:
+                select#name.form-control(name='labor')
+                  option(value='1') Plomero/a
+                  option(value='2') Cerrajero/a
+                  option(value='3') Pintor/a
+                  option(value='4') Profesor de ingles
+                  option(value='5') Mesero/a
+                  option(value='6') Chef
+                  option(value='7') Niñero/a
+                  option(value='8') Paseador/a de mascotas
+                  option(value='9') Empleado/a doméstico/a 
+                  option(value='10') Conductor/a             
+            div.form-group
+               <input type="text" id="tarifa" name="tarifa" placeholder="Tarifa">
+            div.form-group
+            center         
+             a(class='button' href='http://localhost:3000' class='btn btn-primary') Completar registro
+          // Modal Footer
+          .modal-footer
+            h6 Derechos Reservados 2022 &#169
