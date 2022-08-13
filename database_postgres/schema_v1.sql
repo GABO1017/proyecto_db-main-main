@@ -23,11 +23,11 @@ CREATE TABLE Labor(
 );
 
 CREATE TABLE Ubicacion(
-    ubica_direccion 		VARCHAR (45),
-	ubica_ciudad 			VARCHAR(45) 			DEFAULT 'Cali',
-    ubica_departamento      VARCHAR (45)            DEFAULT 'Valle',
+    ubica_direccion 		VARCHAR (45) PRIMARY KEY,
+	  ubica_ciudad 			VARCHAR(45),
+    ubica_departamento      VARCHAR (45),
     ubica_latitud 			DECIMAL(8,6),
-	ubica_longitud 		    DECIMAL(8,6),
+	ubica_longitud 		    DECIMAL(8,6)
 );
 
 CREATE TABLE Persona(
@@ -37,8 +37,8 @@ CREATE TABLE Persona(
     persona_email VARCHAR(45) NOT NULL UNIQUE,
     persona_password VARCHAR(45) NOT NULL,
     persona_celular VARCHAR(15) NOT NULL UNIQUE,
-    persona_ubica_direccion VARCHAR(45)
-    persona_tarjeta_usuario VARCHAR(16) UNIQUE,
+    persona_ubica_direccion VARCHAR(45),
+    persona_tarjeta_usuario VARCHAR(45) UNIQUE,
     persona_cvc VARCHAR(3) UNIQUE,
     CONSTRAINT fk_ubicacion_persona
       FOREIGN KEY(persona_ubica_direccion)
